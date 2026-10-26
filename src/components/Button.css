@@ -1,0 +1,31 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el texto y el icono */
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    width: 100%;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Variante azul sólida */
+.btn-primary {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+}
+
+/* Variante blanca con borde */
+.btn-secondary {
+    background-color: #ffffff;
+    color: #111827;
+    border: 1px solid #d1d5db;
+}
