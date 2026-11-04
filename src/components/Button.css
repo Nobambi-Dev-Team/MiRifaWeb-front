@@ -29,3 +29,10 @@
     color: #111827;
     border: 1px solid #d1d5db;
 }
+
+/* Variante Cancelar (Fondo rosado claro, texto rojo) */
+.btn-cancel {
+    background-color: #FECDD3;
+    color: #E11D48;
+    border: none;
+}

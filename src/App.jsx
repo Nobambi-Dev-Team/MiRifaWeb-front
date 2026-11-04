@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ProtectedRoute } from './routes/ProtectedRoute';
+import CreateRaffle from './pages/createRaffle/CreateRaffle';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import './App.css';
@@ -15,9 +16,12 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<h2>Registro</h2>} />
 
+            <Route path="/create-raffle" element={<CreateRaffle/>} /> 
+
           {/* Rutas Privadas (requieren autenticación) */}
           <Route element={<ProtectedRoute />}>
             <Route path="/raffles/:id" element={<h2>Raffles metrics</h2>} />
+            <Route path="/create-raffle" element={<CreateRaffle/>} />
           </Route>
 
           {/* Ruta por defecto (404 o fallback) */}

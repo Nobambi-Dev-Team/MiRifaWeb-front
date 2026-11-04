@@ -1,0 +1,133 @@
+.prizes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.prize-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background-color: white;
+}
+
+.prize-position-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4F46E5;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+/* Colores alternativos para los badges según tu diseño[cite: 2] */
+/* .prize-item:nth-child(2) .prize-position-badge {
+    background-color: #34D399;
+    color: #064E3B;
+} 
+*/
+
+.prize-content {
+    flex: 1;
+}
+
+.prize-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0F172A;
+}
+
+.prize-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: #94A3B8;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.icon-btn:hover {
+    background-color: #F1F5F9;
+    color: #4F46E5;
+}
+
+.icon-btn.delete:hover {
+    color: #E11D48;
+    background-color: #FFE4E6;
+}
+
+/* Contenedor de Agregar Premio[cite: 2] */
+.add-prize-container {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.add-prize-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.add-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4F46E5;
+    font-weight: 600;
+}
+
+.add-position {
+    font-size: 14px;
+    color: #64748B;
+}
+
+.add-position strong {
+    color: #0F172A;
+}
+
+.btn-add-inline {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    background-color: white;
+    border: 1px dashed #A5B4FC;
+    color: #4F46E5;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-add-inline:hover {
+    background-color: #EEF2FF;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+}

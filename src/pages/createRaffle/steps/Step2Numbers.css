@@ -1,0 +1,95 @@
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.uppercase-input {
+    text-transform: uppercase;
+}
+
+/* Manejo de iconos y sufijos en inputs */
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: #64748B;
+}
+
+.input-with-icon .form-control {
+    padding-left: 3rem;
+    width: 100%;
+}
+
+.right-suffix .form-control {
+    padding-right: 4rem;
+}
+
+.input-suffix {
+    position: absolute;
+    right: 1rem;
+    color: #64748B;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.right-icon .form-control {
+    padding-right: 3rem;
+}
+
+.validation-icon {
+    position: absolute;
+    right: 1rem;
+}
+
+.revenue-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #10B981;
+    margin-top: 6px;
+}
+
+.alias-group {
+    max-width: 500px;
+}
+
+/* Caja de información azul */
+.info-banner {
+    display: flex;
+    gap: 12px;
+    background-color: #EEF2FF;
+    border: 1px solid #E0E7FF;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+}
+
+.info-icon {
+    color: #4F46E5;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-banner p {
+    margin: 0;
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .grid-2-cols {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
