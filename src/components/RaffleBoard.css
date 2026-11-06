@@ -1,0 +1,65 @@
+.raffle-board-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    /* Un sombreado suave si quieres que la tarjeta resalte ligeramente */
+}
+
+/* La cuadrícula de los números */
+.raffle-grid {
+    display: grid;
+    /* Define exactamente 5 columnas del mismo ancho */
+    grid-template-columns: repeat(5, 1fr);
+    /* Define el espacio entre filas y columnas */
+    gap: 12px 10px; 
+    width: 100%;
+}
+
+/* Pie de página del tablero */
+.raffle-board-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    padding-top: 16px;
+}
+
+.numbers-range {
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.btn-next-page {
+    background: none;
+    border: none;
+    color: #4f46e5; /* Azul primario */
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btn-next-page:hover {
+    text-decoration: underline;
+}
+
+.btn-page {
+    background: none;
+    border: none;
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.btn-page:hover {
+    text-decoration: underline;
+    color: #4338ca;
+}
