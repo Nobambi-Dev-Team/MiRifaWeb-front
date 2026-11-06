@@ -1,0 +1,66 @@
+/* Estructura base para todos los números */
+.raffle-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px; /* Espacio entre el check y el número si está seleccionado */
+    width: 100%;
+    aspect-ratio: 2 / 1.2; /* Mantiene la proporción rectangular de tus diseños */
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+/* Modificador para cuando el mouse pasa por encima de un número interactivo */
+.raffle-number.clickable {
+    cursor: pointer;
+}
+
+.raffle-number.clickable:hover {
+    filter: brightness(0.95);
+}
+
+/* --- ESTADOS COMPARTIDOS --- */
+
+/* Número Libre (blanco con borde gris) */
+.raffle-number.number-free {
+    background-color: #ffffff;
+    color: #374151; /* Gris oscuro */
+    border: 1px solid #d1d5db;
+}
+
+/* Número Seleccionado por el Participante (azul sólido) */
+.raffle-number.number-selected {
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: 1px solid #4f46e5;
+}
+
+/* --- ESTADOS EXCLUSIVOS: PARTICIPANTE --- */
+
+/* Número Ocupado (gris claro, texto tachado) */
+.raffle-number.number-occupied-participant {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border: 1px solid #e5e7eb;
+    text-decoration: line-through; /* Efecto tachado */
+}
+
+/* --- ESTADOS EXCLUSIVOS: ORGANIZADOR --- */
+
+/* Número Pendiente de Pago (rojo sólido) */
+.raffle-number.number-pending-organizer {
+    background-color: #ef4444;
+    color: #ffffff;
+    border: 1px solid #ef4444;
+}
+
+/* Número Pagado / Reservado confirmado (azul sólido) */
+.raffle-number.number-paid-organizer {
+    background-color: #4f46e5; /* Mismo tono de azul que el SELECTED */
+    color: #ffffff;
+    border: 1px solid #4f46e5;
+}
