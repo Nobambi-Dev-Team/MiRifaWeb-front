@@ -5,7 +5,7 @@ import ImageUploader from '../../../components/ImageUploader';
 import Button from '../../../components/Button';
 import './Step1General.css'; // Puedes mover los estilos específicos aquí
 
-const Step1General = ({ formData, setFormData, onNext }) => {
+const Step1General = ({ formData, setFormData, onNext, isNextDisabled }) => {
     const navigate = useNavigate();
     
     // Estado local solo para la previsualización visual de la imagen en este paso
@@ -31,6 +31,18 @@ const Step1General = ({ formData, setFormData, onNext }) => {
             // setFormData(prev => ({ ...prev, imageFile: file }));
         }
     };
+
+    const CATEGORY_OPTIONS = [
+    { value: 'TECHNOLOGY', label: 'Tecnología' },
+    { value: 'TRAVEL', label: 'Viajes' },
+    { value: 'CLOTHING', label: 'Ropa' },
+    { value: 'CHARITY', label: 'Beneficencia' },
+    { value: 'VEHICLES', label: 'Vehículos' },
+    { value: 'EDUCATION' , label: 'Educación' },
+    { value: 'GASTRONOMY', label: 'Gastronomía' },
+    { value: 'ENTERTAINMENT', label: 'Entretenimiento' },
+    { value: 'OTHER', label: 'Otros' }
+];
 
     return (
         <div className="form-card">
@@ -64,10 +76,11 @@ const Step1General = ({ formData, setFormData, onNext }) => {
                     className="form-control select-control"
                 >
                     <option value="">Seleccione una categoría</option>
-                    <option value="TECNOLOGIA">Tecnología</option>
-                    <option value="VIAJES">Viajes</option>
-                    <option value="VEHICULOS">Vehículos</option>
-                    <option value="BENEFICENCIA">Beneficencia</option>
+                    {CATEGORY_OPTIONS.map((option) => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
                 </select>
             </div>
 
@@ -134,6 +147,7 @@ const Step1General = ({ formData, setFormData, onNext }) => {
                 <Button 
                     variant="primary" 
                     onClick={onNext}
+                    disabled={isNextDisabled}
                 >
                     <>Siguiente paso <ArrowRight size={20} /></>
                 </Button>

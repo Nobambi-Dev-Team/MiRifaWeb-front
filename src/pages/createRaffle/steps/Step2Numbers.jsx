@@ -2,7 +2,7 @@ import { Ticket, Hash, DollarSign, Landmark, CheckCircle2, ShieldCheck, ArrowRig
 import Button from '../../../components/Button';
 import './Step2Numbers.css';
 
-const Step2Numbers = ({ formData, setFormData, onNext, onPrev }) => {
+const Step2Numbers = ({ formData, setFormData, onNext, onPrev, isNextDisabled }) => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -93,7 +93,10 @@ const Step2Numbers = ({ formData, setFormData, onNext, onPrev }) => {
                     Paso anterior
                 </Button>
                 
-                <Button variant="primary" onClick={onNext}>
+                <Button
+                    variant="primary" onClick={onNext} 
+                    disabled={isNextDisabled}    
+                >
                     <>Siguiente paso <ArrowRight size={20} /></>
                 </Button>
             </div>

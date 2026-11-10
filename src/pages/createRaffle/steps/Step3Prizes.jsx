@@ -3,7 +3,7 @@ import { Trophy, Edit2, Trash2, Plus, Sparkles } from 'lucide-react';
 import Button from '../../../components/Button';
 import './Step3Prizes.css';
 
-const Step3Prizes = ({ formData, setFormData, onPrev, onSubmit }) => {
+const Step3Prizes = ({ formData, setFormData, onPrev, onSubmit, isLoading, isSubmitDisabled }) => {
     // Estado local solo para el input del nuevo premio que se está escribiendo
     const [newPrizeDescription, setNewPrizeDescription] = useState('');
 
@@ -92,8 +92,15 @@ const Step3Prizes = ({ formData, setFormData, onPrev, onSubmit }) => {
                 <Button variant="secondary" onClick={onPrev}>
                     Paso anterior
                 </Button>
-                <Button variant="primary" onClick={onSubmit}>
-                    Finalizar y crear <Sparkles size={20} />
+                <Button
+                    variant="primary" 
+                    onClick={onSubmit} 
+                    disabled={isSubmitDisabled}>
+                    {isLoading ? (
+                        'Creando Rifa...'
+                    ) : (
+                        <>Finalizar y crear <Sparkles size={20} /></>
+                    )}
                 </Button>
             </div>
         </div>
